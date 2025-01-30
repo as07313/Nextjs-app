@@ -25,6 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     return res.status(404).json({error: 'Job not found'});
                 }
 
+                
                 // Check for existing application
                 const existing = await Applicant.findOne({
                     candidateId: user.userId,
